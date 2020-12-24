@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	var school = "山西农大"
 	var name = "walker"
-	fmt.Printf("%s欢迎%s",school,name)
+	fmt.Printf("%s欢迎%s", school, name)
 
 	// _ 匿名变量
 	aa, _ := foo()
@@ -20,6 +20,6 @@ func main()  {
 	fmt.Println(name2)
 }
 
-func foo()(string,int)  {
-	return "alex",9000
+func foo() (string, int) {
+	return "alex", 9000
 }
