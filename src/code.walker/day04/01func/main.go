@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+
+// 匿名函数
 func main() {
 	sayHello()
 	sayHello2("walker")
@@ -19,6 +21,9 @@ func main() {
 	ret7 := intSum3(100, 10, 20)
 	ret8 := intSum3(100, 10, 20, 30)
 	fmt.Println(ret5, ret6, ret7, ret8) //100 110 130 160
+
+	x,y := intSum5(100,200)
+	fmt.Println(x,y)
 }
 
 // 没有参数和返回值的函数
@@ -60,4 +65,16 @@ func intSum3(x int, y ...int) int {
 		sum = sum + v
 	}
 	return sum
+}
+
+// go 语言参数类型的简写
+func intSum4(a,b int) int {
+	return b
+}
+
+// 多少个返回值
+func intSum5(a,b int ) (sum,sub int) {
+	sum = a + b
+	sub = a - b
+	return
 }

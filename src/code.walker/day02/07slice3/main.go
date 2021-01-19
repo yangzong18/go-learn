@@ -14,4 +14,10 @@ func main() {
 	c := make([]int,3,3)// 申请内存空间
 	copy(c,a) //深拷贝
 	fmt.Println(c)
+
+
+	d := make([]int, 2, 10)
+	copy(d,a) //深拷贝
+	fmt.Println(len(d))
+
 }

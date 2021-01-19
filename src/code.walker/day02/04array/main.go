@@ -49,7 +49,7 @@ func main() {
 
 	n := [2]int{1,2}
 	m := n
-	m[0] = 8;
+	m[0] = 8
 	fmt.Println(n)
 	fmt.Println(m)
 }
