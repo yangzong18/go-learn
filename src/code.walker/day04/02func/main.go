@@ -18,7 +18,6 @@ func main() {
 func f1() int {
 	x := 5
 	defer func() {
-		fmt.Print("f1")
 		x++
 	}()
 	return x
@@ -26,7 +25,6 @@ func f1() int {
 
 func f2() (x int) {
 	defer func() {
-		fmt.Print("f2")
 		x++
 	}()
 	return 5
@@ -35,14 +33,12 @@ func f2() (x int) {
 func f3() (y int) {
 	x := 5
 	defer func() {
-		fmt.Print("f3")
 		x++
 	}()
 	return x
 }
 func f4() (x int) {
 	defer func(x int) {
-		fmt.Print("f4")
 		x++
 	}(x)
 	return 5

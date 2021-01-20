@@ -12,5 +12,19 @@ func main() {
 
 	// 变量b 是一个int类型的指针（*int）,它存储的是变量a的内存地址
 	c := *b
-	fmt.Print(c)
+	fmt.Println(c)
+
+	d := 1
+	modify(d)
+	fmt.Println(d)
+	modify2(&d)
+	fmt.Println(d)
+}
+
+func modify(x int)  {
+	x = 100
+}
+
+func modify2(y *int)  {
+	*y = 100
 }
