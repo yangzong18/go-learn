@@ -5,6 +5,10 @@ import (
 	"math/rand"
 	"sort"
 )
+// 学员信息管理系统
+//1.添加学员信息
+//2.编辑学员信息
+//3/
 
 type Students struct {
 	ID int
