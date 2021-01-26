@@ -85,13 +85,13 @@ func (sm *ClassDemo)editStudent(s * Students)  {
 }
 
 // 删除用户
-func (sm *ClassDemo)delStudent(s * Students)  {
-	_, isSave := sm.Map[s.ID]
+func (sm *ClassDemo)delStudent(id int)  {
+	_, isSave := sm.Map[id]
 	if !isSave {
 		fmt.Println("学生ID不存在！")
 		return
 	}
-	delete(sm.Map,s.ID)
+	delete(sm.Map,id)
 	fmt.Println("删除成功！")
 }
 // 展示用户
@@ -127,8 +127,8 @@ func main() {
 			sm.editStudent(stu)
 		case 3:
 			// del
-			stu := getInputs()
-			sm.delStudent(stu)
+			id := getId()
+			sm.delStudent(id)
 		case 4:
 			// show
 			sm.showList()
@@ -144,6 +144,18 @@ func main() {
 // 生成整数的随机数
 func random(min, max int) int {
 	return rand.Intn(max - min) + min
+}
+
+
+// 获取学生id
+func getId() int {
+	var id int
+	fmt.Println("请输入学生id：")
+	_,err := fmt.Scan(&id)
+	if err != nil {
+		fmt.Println("输入id有误，请重新输入")
+	}
+	return id
 }
 
 func showMenu()  {
