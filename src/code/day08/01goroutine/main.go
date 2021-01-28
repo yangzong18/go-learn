@@ -7,7 +7,7 @@ import (
 var wg sync.WaitGroup
 
 func main()  {
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 10000; i++ {
 		wg.Add(1) // 启动一个goroutine就登记+1
 		go say(i)
 	}
